@@ -1,6 +1,6 @@
 ---
-- name: set up mongodb
+- name: set up frontend
   hosts: all
   become: yes
   roles:
-    - mongodb
+    - frontend
