@@ -1,20 +1,19 @@
----
 - name: configuring nodejs Repos
   ansible.builtin.shell: curl -sL https://rpm.nodesource.com/setup_lts.x | bash
 
 - name: install nodejs
   ansible.builtin.yum:
-   name: nodejs
-  state: installed
+    name: nodejs
+    state: installed
 
-- name: app pre-requisties
+- name: app prerequisites
   ansible.builtin.import_tasks:
-  file: App_presetup.yml
+    file: App_presetup.yml
 
 - name: load nodejs dependencies
   ansible.builtin.shell: npm install
   args:
-  chdir: /app
+    chdir: /app
 
 
 
