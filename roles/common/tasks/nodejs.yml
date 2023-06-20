@@ -4,5 +4,19 @@
 
 - name: install nodejs
   ansible.builtin.yum:
-    name: nodejs
-    state: installed
+   name: nodejs
+  state: installed
+
+- name: app pre-requisties
+  ansible.builtin.import_tasks:
+  file: App_presetup.yml
+
+- name: load nodejs dependencies
+  ansible.builtin.shell: npm install
+  args:
+  chdir: /app
+
+
+
+
+
