@@ -1,5 +1,5 @@
 - name: setup catlalogue component
-  hosts: all
+  hosts: all11
   become: yes
   vars:
     component: catalogue
