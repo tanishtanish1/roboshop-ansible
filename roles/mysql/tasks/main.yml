@@ -9,7 +9,7 @@
 - name: intsall mysql
   ansible.builtin.yum:
     name: mysql-community-server
-    state: insalled
+    state: installed
 
 - name: start Mysql services
   ansible.builtin.systemd:
