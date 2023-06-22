@@ -14,7 +14,7 @@
     state: restarted
     enabled: yes
 
-- Name: Add application user
+- name: Add application user
   community.rabbitmq.rabbitmq_user:
     user: roboshop
     password: roboshop123
