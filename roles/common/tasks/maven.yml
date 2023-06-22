@@ -1,5 +1,5 @@
 - name: Install maven
-  ansibile.builtin.yum:
+  ansible.builtin.yum:
     name: maven
     state: installed
 
@@ -15,4 +15,6 @@
 - name: Mysql schema setup
   ansible.builtin.import_tasks:
       file: mysql_schema_setup.yml
-
+- name: systemD setup
+  ansible.builtin.import_tasks:
+    file: systemd_setup.yml
